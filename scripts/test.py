@@ -15,3 +15,4 @@ def poc(target):
         return 123
     if target.startswith('h'):
         return 0
+    return target

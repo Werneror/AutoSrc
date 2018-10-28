@@ -9,7 +9,7 @@ def argv_parse():
     parser.add_argument('-q', '--quiet', dest='quiet', action='store_true', default=False, help='Do not export redundant information.') 
     parser.add_argument('-t', metavar='THREAD', dest='thread', type=int, default=1, help='Number of threads') 
     parser.add_argument('-s', metavar='SCRIPT', dest='script', required=True, help='Script to execute') 
-    parser.add_argument('-i', metavar='INPUT', dest='inputs', action='append', required=True, help='Input, can be many times.')
+    parser.add_argument('-i', metavar='INPUT', dest='inputs', action='append', help='Input, can be many times.')
 
     return parser.parse_args()
 

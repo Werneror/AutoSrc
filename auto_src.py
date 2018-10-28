@@ -10,7 +10,10 @@ from libs.exploit import run
 
 if __name__ == '__main__':
     argvs = argv_parse()
-    argvs.inputs += inputs_from_stdin()
+    if argvs.inputs:
+        argvs.inputs += inputs_from_stdin()
+    else:
+        argvs.inputs = inputs_from_stdin()
 
     scripts = scripts_parse(argvs.script)
     targets = argvs.inputs
