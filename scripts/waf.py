@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # author = w8ay
+# 该脚本用于检测目标是否存在WAF（Web应用防火墙）
 
 import requests
 import re
@@ -101,5 +102,5 @@ def poc(url):
 
 
 if __name__ == '__main__':
-    print poc("http://virtual.glxy.sdu.edu.cn/")
+    print(poc("http://virtual.glxy.sdu.edu.cn/"))
 

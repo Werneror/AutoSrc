@@ -1,3 +1,5 @@
+# 该脚本用于测试
+
 def poc(target):
     if target.startswith('a'):
         return True

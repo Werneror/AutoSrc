@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# 该脚本调用多个子域名API查询给定域名的子域名
+
+
 import requests
 from bs4 import BeautifulSoup
 import urlparse

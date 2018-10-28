@@ -1,12 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # author = Werner
+# 该脚本从一个url开始，以广度优先的队列爬取网页中同域名下的链接，默认爬取３级网页，可修改LEVEL参数
 
 from bs4 import BeautifulSoup
 import requests
 import urlparse
 import urllib
 import Queue
+
+LEVEL = 3
 
 
 class spiderMain(object):
@@ -66,7 +69,7 @@ def poc(url):
     url_queue.put((0, url))
     while not url_queue.empty():
         level, url = url_queue.get()
-        if level > 3:
+        if level > LEVEL:
             break
         s = spiderMain(url)
         new_urls = s.run()

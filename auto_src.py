@@ -21,3 +21,4 @@ if __name__ == '__main__':
     quiet = argvs.quiet
 
     run(*check_parse(scripts, targets, threads, quiet))
+
