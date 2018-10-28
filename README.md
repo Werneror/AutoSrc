@@ -89,7 +89,7 @@ python auto_src.py -s muli -i target1 -i target2
 ### 级连不同脚本
 
 ```
-python auto_src.py -s test1 -i target | python auto_scr.py -s test2
+python auto_src.py -s test1 -i target > out.txt && cat out.txt | python auto_scr.py -s test2
 ```
 
 会将test1.py的输出做为test2.py的输入。
