@@ -7,7 +7,7 @@
 
 本项目是模仿[POC-T](https://github.com/Xyntax/POC-T)写的一个脚本调用框架，最终目的是实现自动化漏洞挖掘。
 
-设计思路参考了[POC-T](https://github.com/Xyntax/POC-T)，有很多脚本直接来自此项目，还有一些脚本来自于[boy-hack]的[https://github.com/boy-hack](https://github.com/boy-hack/POC-T)。
+设计思路参考了[POC-T](https://github.com/Xyntax/POC-T)，有很多脚本直接来自此项目，还有一些脚本来自于[boy-hack](https://github.com/boy-hack)的[POC-T](https://github.com/boy-hack/POC-T)。
 
 
 ## 目录结构
@@ -92,7 +92,7 @@ python auto_src.py -s muli -i target1 -i target2
 python auto_src.py -s test1 -i target | python auto_scr.py -s test2
 ```
 
-会将test1.py的输出作为test2.py的输入。
+会将test1.py的输出做为test2.py的输入。
 
 在使用管道时，可以加上-q参数使框架不输出提示信息。
 但这是没有必要的，提示信息会直接输出到屏幕，不会进入管道。
